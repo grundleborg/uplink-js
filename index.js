@@ -4,7 +4,7 @@ export default class Client {
         this.key = key;
     };
 
-    track = (event, data) => {
+    function track(event, data) {
         let payload = {
             source: this.key,
             schema: event,
