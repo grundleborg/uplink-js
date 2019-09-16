@@ -4,7 +4,7 @@ export default class Client {
         this.key = key;
     };
 
-    function track(event, data) {
+    track(event, data) {
         let payload = {
             source: this.key,
             schema: event,
@@ -23,5 +23,5 @@ export default class Client {
             referrer: 'no-referrer',
             body: JSON.stringify(payload),
         });
-    };
+    }
 }
