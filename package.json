@@ -2,10 +2,21 @@
   "name": "uplink",
   "version": "0.0.1",
   "description": "Javascript Client for Uplink",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel -s inline -d lib -w src",
+    "build": "babel -s inline -d lib src",
+    "prepublish": "npm test && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-entries": "^1.0.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }

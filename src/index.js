@@ -5,7 +5,7 @@ export default class Client {
         this.key = key;
     };
 
-    track(event, data) {
+    track = (event, data) => {
         let payload = {
             warehouse: this.warehouse,
             source: this.key,
@@ -25,5 +25,5 @@ export default class Client {
             referrer: 'no-referrer',
             body: JSON.stringify(payload),
         });
-    }
+    };
 }
